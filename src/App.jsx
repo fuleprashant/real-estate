@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
-
 import About from "./pages/About";
 import Profile from "./pages/Profile";
 import SignUp from "./pages/SignOut";
@@ -29,7 +28,11 @@ const App = () => {
       element: <Profile />,
     },
   ]);
-  return <RouterProvider router={router} />;
+  return (
+    <div>
+      <RouterProvider router={router} />
+    </div>
+  );
 };
 
 export default App;
