@@ -4,28 +4,36 @@ import SignIn from "./pages/SignIn";
 import About from "./pages/About";
 import Profile from "./pages/Profile";
 import SignUp from "./pages/SignOut";
+import Header from "./components/Header";
+import FirstLayout from "./Layout/FirstLayout";
 
 const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
-    },
-    {
-      path: "/sign-in",
-      element: <SignIn />,
-    },
-    {
-      path: "/sign-up",
-      element: <SignUp />,
-    },
-    {
-      path: "/about",
-      element: <About />,
-    },
-    {
-      path: "/profile",
-      element: <Profile />,
+      element: <FirstLayout />,
+      children: [
+        {
+          path: "",
+          element: <Home />,
+        },
+        {
+          path: "sign-in",
+          element: <SignIn />,
+        },
+        {
+          path: "sign-up",
+          element: <SignUp />,
+        },
+        {
+          path: "about",
+          element: <About />,
+        },
+        {
+          path: "profile",
+          element: <Profile />,
+        },
+      ],
     },
   ]);
   return (
