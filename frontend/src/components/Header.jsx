@@ -6,13 +6,11 @@ const Header = () => {
     <header className="bg-slate-200 shadow-md">
       <div className="flex justify-between items-center mx-auto p-3">
         <NavLink to="/">
-          
-          <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
+          <h1 className="font-bold text-sm sm:text-xl">
             <span className="text-slate-500">Prashant</span>
             <span className="text-slate-700">Estate</span>
           </h1>
         </NavLink>
-
         <form className="bg-slate-100 p-3 rounded-lg flex items-center">
           <input
             type="text"
@@ -36,7 +34,7 @@ const Header = () => {
             <li className="inline text-slate-700 hover:underline">SignIn</li>
           </NavLink>
         </ul>
-      </div>
+      </div>  
     </header>
   );
 };
